@@ -70,3 +70,11 @@ function gotResultFuchun(err, img) {
     //keeps doing the transfer
     style.transfer(gotResultFuchun);
 }
+
+//this just keeps looping and updating the image
+function gotResultMountain(err, img) {
+    //adds the atribute of 'src' to the object resultImg
+    resultImg.attribute('src', img.src);
+    //keeps doing the transfer
+    style.transfer(gotResultMountain);
+}
