@@ -54,13 +54,13 @@ function draw() {
 
 //this triggers when the model loads to initiate gotResult
 function modelLoaded() {
+    //once the models have loaded 
     //selects the item in the html with the label 'status'
     //and changes the html to new text
+    if (styleFuchun.ready && styleMountain.ready) {
     select('#status').html('Robots Assembled');
+    }
 
-    //TODO: I think this should be happen in the *Press functions above
-    //initiates the style transfer process
-    //style.transfer(gotResult);
 }
 
 //this just keeps looping and updating the image
