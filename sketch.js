@@ -34,7 +34,7 @@ function setup() {
     styleFuchun = ml5.styleTransfer('models/fuchun', video, modelLoaded);
 
     //this is the button to choose Fuchun model
-    fuchunButton = createButton('Fuchun');
+    fuchunButton = createButton('Fuchun').addClass('pushButton');
     //and the action that is activated when the button is pressed
     fuchunButton.mousePressed(fuchunPress);
 
@@ -54,7 +54,7 @@ function draw() {
 
 //this triggers when the model loads to initiate gotResult
 function modelLoaded() {
-    //once the models have loaded 
+    //once the models have loaded
     //selects the item in the html with the label 'status'
     //and changes the html to new text
     if (styleFuchun.ready && styleMountain.ready) {
