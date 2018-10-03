@@ -4,6 +4,7 @@ let styleFuchun;
 let resultImg;
 let fuchunButton;
 let mountainButton;
+let fuchunHtmlButton;
 
 function fuchunPress() {
     styleFuchun.transfer(gotResultFuchun);
@@ -42,6 +43,9 @@ function setup() {
     mountainButton = createButton('A Mountain Climber');
     //and the action that is activated when the button is pressed
     mountainButton.mousePressed(mountainPress);
+
+    fuchunHtmlButton = select('#fuchunHtmlButton');
+    fuchunHtmlButton.mousePressed(fuchunPress);
 
 
 }
