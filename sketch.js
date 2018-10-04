@@ -5,6 +5,7 @@ let resultImg;
 let fuchunButton;
 let mountainButton;
 let fuchunHtmlButton;
+let mountainHtmlButton;
 
 function fuchunPress() {
     styleFuchun.transfer(gotResultFuchun);
@@ -47,6 +48,8 @@ function setup() {
     fuchunHtmlButton = select('#fuchunHtmlButton');
     fuchunHtmlButton.mousePressed(fuchunPress);
 
+    mountainHtmlButton = select('#mountainHtmlButton');
+    mountainHtmlButton.mousePressed(mountainPress);
 
 }
 
