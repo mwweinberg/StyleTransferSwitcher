@@ -15,6 +15,18 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#header{
+    background-color: white;
+    color: black;
+}
+
+#footer{
+    background-color: white;
+    text-transform: lowercase;
+    font-size: 12px;
+
+}
+
 .pushButton {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -24,6 +36,19 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+body {
+    /* The image used */
+    background-image: url("images/smk-light.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*
@@ -70,9 +95,13 @@ Section for button alignment/positioning stuff
 **********
 */
 
+#buttonWrapper {
+    background-color: black;
+}
+
 #position1 {
     float: left;
-    width: 25%;
+    width: 21%;
     overflow: hidden;
 }
 

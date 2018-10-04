@@ -36,14 +36,14 @@ function setup() {
     styleFuchun = ml5.styleTransfer('models/fuchun', video, modelLoaded);
 
     //this is the button to choose Fuchun model
-    fuchunButton = createButton('Fuchun').addClass('pushButton');
+    //fuchunButton = createButton('Fuchun').addClass('pushButton');
     //and the action that is activated when the button is pressed
-    fuchunButton.mousePressed(fuchunPress);
+    //fuchunButton.mousePressed(fuchunPress);
 
     //this is the button to choose Fuchun model
-    mountainButton = createButton('A Mountain Climber');
+    //mountainButton = createButton('A Mountain Climber');
     //and the action that is activated when the button is pressed
-    mountainButton.mousePressed(mountainPress);
+    //mountainButton.mousePressed(mountainPress);
 
     fuchunHtmlButton = select('#fuchunHtmlButton');
     fuchunHtmlButton.mousePressed(fuchunPress);
