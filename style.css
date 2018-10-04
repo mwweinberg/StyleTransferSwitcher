@@ -27,7 +27,9 @@ p {
 }
 
 /*
+**********
 Section for fancy button on image stuff
+**********
 */
 
 /* Container needed to position the button. Adjust the width as needed */
@@ -60,4 +62,20 @@ Section for fancy button on image stuff
 
 .container .btn:hover {
   background-color: black;
+}
+
+/*
+**********
+Section for button alignment/positioning stuff
+**********
+*/
+
+#position1 {
+    float: left;
+    width: 25%;
+    overflow: hidden;
+}
+
+#position2 {
+    overflow:hidden;
 }
