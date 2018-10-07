@@ -17,7 +17,7 @@ function mountainPress() {
 
 function setup() {
     //the .parent creates a dom element with that label
-    createCanvas(320, 240).parent('canvasContainer');
+    createCanvas(640, 480).parent('canvasContainer');
 
     //grabs video from webcam
     video = createCapture(VIDEO);
@@ -35,16 +35,6 @@ function setup() {
     styleMountain = ml5.styleTransfer('models/mountainclimber', video, modelLoaded);
     styleFuchun = ml5.styleTransfer('models/fuchun', video, modelLoaded);
 
-    //this is the button to choose Fuchun model
-    //fuchunButton = createButton('Fuchun').addClass('pushButton');
-    //and the action that is activated when the button is pressed
-    //fuchunButton.mousePressed(fuchunPress);
-
-    //this is the button to choose Fuchun model
-    //mountainButton = createButton('A Mountain Climber');
-    //and the action that is activated when the button is pressed
-    //mountainButton.mousePressed(mountainPress);
-
     fuchunHtmlButton = select('#fuchunHtmlButton');
     fuchunHtmlButton.mousePressed(fuchunPress);
 
@@ -56,7 +46,7 @@ function setup() {
 //the image is hidden in the other functions so that it
 //can be drawn here
 function draw() {
-    image(resultImg, 0, 0, 320, 240);
+    image(resultImg, 0, 0, 640, 480);
 }
 
 //this triggers when the model loads to initiate gotResult
@@ -65,7 +55,7 @@ function modelLoaded() {
     //selects the item in the html with the label 'status'
     //and changes the html to new text
     if (styleFuchun.ready && styleMountain.ready) {
-    select('#status').html('Robots Assembled');
+    select('#status').html('Choose an image from the SMK Open Collection below');
     }
 
 }

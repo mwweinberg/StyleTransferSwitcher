@@ -1,3 +1,7 @@
+html * {
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
 img {
   width: 300px;
   display: block;
@@ -5,25 +9,46 @@ img {
 }
 #canvasContainer {
   display: inline;
-  padding: 25px;
+  padding: 15px;
+ 
 }
+
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#sub-body {
+    /* The image used */
+    background-image: url("images/smk-light.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
+
 #header{
-    background-color: white;
+    background: rgba(255,255,255,0.5);
+    border-radius: 25px;
     color: black;
+    padding: 10px, 10px;
+    text-align: center;
 }
 
 #footer{
-    background-color: white;
+    background: rgba(255,255,255,0.5);
+    border-radius: 25px;
     text-transform: lowercase;
     font-size: 12px;
+    padding: 5px 10px 5px;
 
 }
 
@@ -36,19 +61,6 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
-
-body {
-    /* The image used */
-    background-image: url("images/smk-light.jpg");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /*
@@ -97,6 +109,7 @@ Section for button alignment/positioning stuff
 
 #buttonWrapper {
     background-color: black;
+    border-radius: 10px;
 }
 
 #position1 {
