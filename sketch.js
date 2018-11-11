@@ -15,6 +15,10 @@ function mountainPress() {
     styleMountain.transfer(gotResultMountain);
 }
 
+function palacePress() {
+    stylePalace.transfer(gotResultPalace);
+}
+
 function setup() {
     //the .parent creates a dom element with that label
     createCanvas(640, 480).parent('canvasContainer');
@@ -34,12 +38,16 @@ function setup() {
     //and triggers a callback function
     styleMountain = ml5.styleTransfer('models/mountainclimber', video, modelLoaded);
     styleFuchun = ml5.styleTransfer('models/fuchun', video, modelLoaded);
+    stylePalace = ml5.styleTransfer('models/palace', video, modelLoaded);
 
     fuchunHtmlButton = select('#fuchunHtmlButton');
     fuchunHtmlButton.mousePressed(fuchunPress);
 
     mountainHtmlButton = select('#mountainHtmlButton');
     mountainHtmlButton.mousePressed(mountainPress);
+
+    palaceHtmlButton = select('#palaceHtmlButton');
+    palaceHtmlButton.mousePressed(palacePress);
 
 }
 
@@ -54,7 +62,7 @@ function modelLoaded() {
     //once the models have loaded
     //selects the item in the html with the label 'status'
     //and changes the html to new text
-    if (styleFuchun.ready && styleMountain.ready) {
+    if (styleFuchun.ready && styleMountain.ready && stylePalace.ready) {
     select('#status').html('Choose an image from the SMK Open Collection below');
     }
 
@@ -74,4 +82,11 @@ function gotResultMountain(err, img) {
     resultImg.attribute('src', img.src);
     //keeps doing the transfer
     styleMountain.transfer(gotResultMountain);
+}
+
+function gotResultPalace(err, img) {
+    //adds the atribute of 'src' to the object resultImg
+    resultImg.attribute('src', img.src);
+    //keeps doing the transfer
+    stylePalace.transfer(gotResultPalace);
 }
