@@ -10,7 +10,7 @@ img {
 #canvasContainer {
   display: inline;
   padding: 15px;
- 
+
 }
 
 h1 {
@@ -72,7 +72,7 @@ Section for fancy button on image stuff
 /* Container needed to position the button. Adjust the width as needed */
 .container {
   position: relative;
-  width: 50%;
+  width: 25%;
 }
 
 /* Make the image responsive */
@@ -110,14 +110,23 @@ Section for button alignment/positioning stuff
 #buttonWrapper {
     background-color: black;
     border-radius: 10px;
+    display: flex;
 }
 
 #position1 {
     float: left;
-    width: 21%;
+    /*width: 25%; */
     overflow: hidden;
 }
 
 #position2 {
+    overflow:hidden;
+}
+
+#position3 {
+    overflow:hidden;
+}
+
+#position4 {
     overflow:hidden;
 }
