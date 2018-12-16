@@ -1,11 +1,21 @@
 let video;
+
 let styleMountain;
 let styleFuchun;
+let stylePalace;
+let styleudnie;
+
 let resultImg;
+
 let fuchunButton;
 let mountainButton;
+let palaceButton;
+let udnieButton;
+
 let fuchunHtmlButton;
 let mountainHtmlButton;
+let palaceHtmlButton;
+let udnieHtmlButton;
 
 function fuchunPress() {
     styleFuchun.transfer(gotResultFuchun);
@@ -17,6 +27,10 @@ function mountainPress() {
 
 function palacePress() {
     stylePalace.transfer(gotResultPalace);
+}
+
+function udniePress() {
+    styleUdnie.transfer(gotResultUdnie);
 }
 
 function setup() {
@@ -39,6 +53,7 @@ function setup() {
     styleMountain = ml5.styleTransfer('models/mountainclimber', video, modelLoaded);
     styleFuchun = ml5.styleTransfer('models/fuchun', video, modelLoaded);
     stylePalace = ml5.styleTransfer('models/palace', video, modelLoaded);
+    styleUdnie = ml5.styleTransfer('models/udnie', video, modelLoaded);
 
     fuchunHtmlButton = select('#fuchunHtmlButton');
     fuchunHtmlButton.mousePressed(fuchunPress);
@@ -48,6 +63,9 @@ function setup() {
 
     palaceHtmlButton = select('#palaceHtmlButton');
     palaceHtmlButton.mousePressed(palacePress);
+
+    udnieHtmlButton = select('#udnieHtmlButton');
+    udnieHtmlButton.mousePressed(udniePress);
 
 }
 
@@ -62,7 +80,7 @@ function modelLoaded() {
     //once the models have loaded
     //selects the item in the html with the label 'status'
     //and changes the html to new text
-    if (styleFuchun.ready && styleMountain.ready && stylePalace.ready) {
+    if (styleFuchun.ready && styleMountain.ready && stylePalace.ready && styleUdnie.ready) {
     select('#status').html('Choose an image from the SMK Open Collection below');
     }
 
@@ -89,4 +107,9 @@ function gotResultPalace(err, img) {
     resultImg.attribute('src', img.src);
     //keeps doing the transfer
     stylePalace.transfer(gotResultPalace);
+}
+
+function gotResultUdnie(err, img) {
+    resultImg.attribute('src', img.src);
+    styleUdnie.transfer(gotResultUdnie);
 }
